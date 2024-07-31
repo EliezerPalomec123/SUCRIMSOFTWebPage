@@ -19,7 +19,7 @@
   export const ServiciosComponent = () => {
     return (
       <section>
-        <div className="h-[30rem] mt-[6rem] flex justify-center relative">
+        <div className="h-[26rem] md:h-[28rem] lg:h-[30rem] mt-[6rem] flex justify-center relative">
           <div className="h-full relative w-8/10 lg:w-9/10">
             <Swiper
               navigation={{

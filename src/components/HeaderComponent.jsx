@@ -1,27 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import logo from "../assets/images/logo-empresa.png";
+import { Link } from "react-scroll";
 
 export const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 ...">
-      <nav className="bg-white border-gray-200 dark:bg-blue-bg z-50">
+    <header
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
+        scrolled ? "bg-blue-bg" : "bg-transparent"
+      }`}
+    >
+      <nav className="bg-transparent backdrop-blur-md  dark:bg-transparent dark:border-gray-700 z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
-            href="https://flowbite.com/"
+            href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+            <img src={logo} className="h-12" alt="Flowbite Logo" />
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              Sucrimsoft
             </span>
           </a>
           <button
@@ -54,14 +72,33 @@ export const HeaderComponent = () => {
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                <Link
+                  to="thecnologies" 
+                  smooth={true}
+                  duration={2000}
+                  offset={-80}
+                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 hover:cursor-pointer"
                   aria-current="page"
                 >
-                  Home
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Nosotros
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#thecnologies"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Tenologías
                 </a>
               </li>
               <li>
@@ -69,7 +106,7 @@ export const HeaderComponent = () => {
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
-                  About
+                  Servicios
                 </a>
               </li>
               <li>
@@ -77,23 +114,7 @@ export const HeaderComponent = () => {
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Contact
+                  Contacto
                 </a>
               </li>
             </ul>

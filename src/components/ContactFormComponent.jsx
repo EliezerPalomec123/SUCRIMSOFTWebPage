@@ -10,11 +10,11 @@ export const ContactFormComponent = () => {
   return (
     <section className="mt-16 mb-16 xl:w-8/10 mx-auto 2xl:w-7/10">
       {/* Contenedor para toda la sección */}
-      <div className="h-[48rem] xl:h-[32rem] xl:flex">
+      <div className="h-[48rem] xl:h-[34rem] xl:flex">
         {/* Contenedor para el texto */}
         <div className=" text-center flex flex-col xl:w-6/10 my-auto xl:text-start">
           <h1 className="text-3xl font-bold py-4 sm:text-4xl md:text-[3rem] lg:text-[3.2rem] xl:text-[4.5rem] xl:pl-5 xl:py-4 2xl:text-[6rem] 2xl:py-10">Contáctanos</h1>
-          <p className="px-2 py-2 text-[1.1rem] sm:text-[1.2rem] sm:px-5 lg:text-[1.3rem] lg:px-7 xl:text-start xl:text-[1.8rem] xl:p-0 xl:pl-5 xl:py-6">
+          <p className="px-2 py-2 text-[1.1rem] sm:text-[1.2rem] sm:px-5 lg:text-[1.3rem] lg:px-7 xl:text-start xl:text-[1.8rem] xl:p-0 xl:pl-5 xl:py-6 xl:pr-10">
             Mantengámonos en contacto potenciamos equipos y empresas
             excepcionales. <br /> Escribenos, queremos conocer sobre tu empresa
             y tus proyectos.
@@ -41,7 +41,7 @@ export const ContactFormComponent = () => {
         </div>
 
         {/* Contenedor para el formulario */}
-        <div className="xl:w-4/10 xl:flex flex-col justify-center">
+        <div className="xl:w-4/10 xl:flex flex-col justify-center mt-12 xl:mt-0">
           <FormContactComponent/>
         </div>
       </div>

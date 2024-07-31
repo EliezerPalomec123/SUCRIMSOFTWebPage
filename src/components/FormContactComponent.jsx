@@ -8,8 +8,8 @@ export const FormContactComponent = () => {
           <input
             type="text"
             id="base-input"
-            className="bg-gray-50 border w-full  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 focus:ring-blue"
-            placeholder = "Escribe tu nombre"
+            className="bg-gray-50 border-2 border-gray-300 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+            placeholder="Escribe tu nombre"
           />
         </div>
 
@@ -17,7 +17,7 @@ export const FormContactComponent = () => {
           <input
             type="email"
             id="email"
-            className="bg-gray-50 border w-full  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 focus:ring-blue"
+            className="bg-gray-50 border-2 border-gray-300 w-full text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-2.5"
             placeholder="Escribe tu correo ej.name@flowbite.com"
             required
           />
@@ -27,7 +27,7 @@ export const FormContactComponent = () => {
           <input
             type="text"
             id="base-input"
-            className="bg-gray-50 border w-full  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 focus:ring-blue"
+            className="bg-gray-50 border-2 w-full border-gray-300 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-2.5"
             placeholder="Asunto"
           />
         </div>
@@ -36,7 +36,7 @@ export const FormContactComponent = () => {
           <textarea
             id="message"
             rows="4"
-            className="block p-2.5 w-full text-sm bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500"
+            className="block p-2.5 w-full text-sm bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Escribe aquí tu mensaje"
           ></textarea>
         </div>

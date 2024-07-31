@@ -9,14 +9,21 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation, Autoplay } from "swiper/modules";
 
-import pngReact from "../assets/images/react.png";
-import pngAngular from "../assets/images/angular.png";
-import pngJava from "../assets/images/java.png";
+import pngReact from "../assets/images/logo-technologies/logo-react.png";
+import pngAngular from "../assets/images/logo-technologies/angular.png";
+import pngCplus from "../assets/images/logo-technologies/logo-c++.png";
+import pngJava from "../assets/images/logo-technologies/logo-java.png";
+import pngNode from "../assets/images/logo-technologies/logo-node.png";
+import pngPython from "../assets/images/logo-technologies/logo-python.png";
+import pngVue from "../assets/images/logo-technologies/logo-vue.png";
+import pngC from "../assets/images/logo-technologies/logo-c.png";
+
+
 import { ItemCarrouselTecComponent } from "./ItemCarrouselTecComponent";
 
 export const TecnologiasComponent = () => {
   return (
-    <section className="mt-[7rem]">
+    <section className="mt-[7rem]" id="thecnologies">
       {/* Contenedor para toda la sección */}
       <div className="bg-black md:w-9/10 mx-auto lg:flex lg:w-full xl:w-9.5/10 xl:rounded-[3rem] 2xl:w-9/10">
         {/* Contenedor para el texto */}
@@ -45,9 +52,9 @@ export const TecnologiasComponent = () => {
                 slidesPerView: 2,
                 spaceBetween: 30,
               },
-              450: {
+              500: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 20,
               },
 
               640: {
@@ -66,40 +73,40 @@ export const TecnologiasComponent = () => {
             }}
             className="mySwiper"
           >
-            <SwiperSlide className="bg-white rounded-3xl 2xl:w-[200px] flex justify-center">
+            <SwiperSlide className="bg-white rounded-3xl 2xl:w-[200px] flex justify-center overflow-hidden">
               <ItemCarrouselTecComponent image={pngReact} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
               <ItemCarrouselTecComponent image={pngAngular} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
-              <ItemCarrouselTecComponent image={pngAngular} />
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
+              <ItemCarrouselTecComponent image={pngCplus} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
-              <ItemCarrouselTecComponent image={pngAngular} />
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
+              <ItemCarrouselTecComponent image={pngJava} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
-              <ItemCarrouselTecComponent image={pngAngular} />
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
+              <ItemCarrouselTecComponent image={pngNode} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
-              <ItemCarrouselTecComponent image={pngAngular} />
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
+              <ItemCarrouselTecComponent image={pngPython} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
-              <ItemCarrouselTecComponent image={pngAngular} />
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
+              <ItemCarrouselTecComponent image={pngVue} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
-              <ItemCarrouselTecComponent image={pngAngular} />
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
+              <ItemCarrouselTecComponent image={pngVue} />
             </SwiperSlide>
 
-            <SwiperSlide className="bg-white rounded-3xl flex justify-center">
-              <ItemCarrouselTecComponent image={pngAngular} />
+            <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
+              <ItemCarrouselTecComponent image={pngC} />
             </SwiperSlide>
           </Swiper>
         </div>
