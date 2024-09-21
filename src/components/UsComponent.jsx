@@ -9,7 +9,7 @@ import { BsFillPuzzleFill } from "react-icons/bs";
 
 export const UsComponent = () => {
   return (
-    <section className='mt-8 xl:hidden'>
+    <section className='mt-8 xl:hidden' id='us-small'>
       {/* Contenedor para toda la sección */}
       <div>
         <h1 className='text-center text-blue-bg text-[24px] font-bold'>Nuestra Identidad</h1>

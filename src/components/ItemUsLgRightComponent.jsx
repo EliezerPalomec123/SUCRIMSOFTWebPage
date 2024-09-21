@@ -24,7 +24,6 @@ export const ItemUsLgRightComponent = ({
 
       {/* Contenedor para el texto */}
       <div className="h-9/10 w-7/10 flex flex-col items-center justify-center">
-        {/* <h1 className='text-4xl font-bold py-8'>Misión</h1> */}
         <p className="text-[22px] pl-11 2xl:text-[28px] font-sans"> {description} </p>
       </div>
     </div>

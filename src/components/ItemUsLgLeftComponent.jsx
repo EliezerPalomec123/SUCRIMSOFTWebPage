@@ -15,7 +15,6 @@ export const ItemUsLgLeftComponent = ( {image, letter, restText, description} ) 
 
       {/* Contenedor para el texto */}
       <div className="h-9/10 w-7/10 flex flex-col items-center justify-center">
-        {/* <h1 className='text-4xl font-bold py-8'>Misión</h1> */}
         <p className="text-[22px] px-4 2xl:text-[28px] 2xl:pl-10 pt-5"> { description } </p>
       </div>
 

@@ -2,9 +2,10 @@ import React from 'react'
 import video from '../assets/video/planeta.mp4'
 import { TextBannerComponent } from './TextBannerComponent'
 
+
 export const BannerComponent = () => {
   return (
-    <section className='mb-20'>
+    <section className='mb-20' id='init'>
       {/* Div que encierra a toda la sección */}
       <div className='relative w-full h-[35rem] overflow-hidden lg:h-screen'>
         <video

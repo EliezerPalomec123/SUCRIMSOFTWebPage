@@ -18,8 +18,9 @@
 
   export const ServiciosComponent = () => {
     return (
-      <section>
-        <div className="h-[26rem] md:h-[28rem] lg:h-[30rem] mt-[6rem] flex justify-center relative">
+      <section id="services" className="mt-16">
+        <h1 className="text-2xl text-blue-bg font-bold sm:text-3xl py-12 md:text-4xl text-center">Nuestros Servicios</h1>
+        <div className="h-[26rem] md:h-[28rem] lg:h-[30rem] flex justify-center relative">
           <div className="h-full relative w-8/10 lg:w-9/10">
             <Swiper
               navigation={{
@@ -27,6 +28,12 @@
                 prevEl: '.swiper-button-prev'
               }}
               modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              loopFillGroupWithBlank={true}
               slidesPerView={3}
               spaceBetween={30}
               breakpoints={{

@@ -17,6 +17,7 @@ import pngNode from "../assets/images/logo-technologies/logo-node.png";
 import pngPython from "../assets/images/logo-technologies/logo-python.png";
 import pngVue from "../assets/images/logo-technologies/logo-vue.png";
 import pngC from "../assets/images/logo-technologies/logo-c.png";
+import pngCn from "../assets/images/logo-technologies/logo-cn.png";
 
 
 import { ItemCarrouselTecComponent } from "./ItemCarrouselTecComponent";
@@ -40,11 +41,13 @@ export const TecnologiasComponent = () => {
         <div className="w-full h-[14rem] px-5 flex items-center sm:w-9/10 mx-auto lg:w-1/2 lg:h-[18rem] 2xl:px-[4rem]">
           <Swiper
             navigation={true}
-            autoplay={{ 
+            autoplay={{
               delay: 1499, 
               disableOnInteraction: false 
             }}
             modules={[Navigation, Autoplay]}
+            loop={true}
+            loopFillGroupWithBlank={true}
             centeredSlides={true}
             slidesPerView={2}
             breakpoints={{
@@ -102,7 +105,7 @@ export const TecnologiasComponent = () => {
             </SwiperSlide>
 
             <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">
-              <ItemCarrouselTecComponent image={pngVue} />
+              <ItemCarrouselTecComponent image={pngCn} />
             </SwiperSlide>
 
             <SwiperSlide className="bg-white rounded-3xl flex justify-center overflow-hidden">

@@ -1,4 +1,9 @@
 import React from 'react'
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+
 
 export const Footercomponent = () => {
   return (
@@ -48,12 +53,26 @@ export const Footercomponent = () => {
           {/* Redes Sociales */}
           <div className="w-full md:w-1/3 lg:w-1/4 text-center p-3">
             <p className="text-xl mb-3">Redes Sociales</p>
-            <div className="mb-2">
-              <a className="text-white text-decoration-none" href="#">Instagram</a>
+            <div className="mb-2 flex justify-center items-center">
+              <FaFacebook className='text-[1.4rem] font-bold'/>
+              <a className="text-white text-decoration-none ml-2" href="https://www.facebook.com/profile.php?id=61550870477638">Facebook</a>
             </div>
-            <div className="mb-2">
-              <a className="text-white text-decoration-none" href="#">Facebook</a>
+
+            <div className="mb-2 flex justify-center items-center">
+              <FaInstagram className='text-[1.4rem] font-bold'/>
+              <a className="text-white text-decoration-none ml-2" href="#">Instagram</a>
             </div>
+
+            <div className="mb-2 flex justify-center items-center">
+              <FaLinkedin className='text-[1.4rem] font-bold'/>
+              <a className="text-white text-decoration-none ml-2" href="https://www.linkedin.com/company/sucrimsoft/people/?facetGeoRegion=103323778">Linkedin</a>
+            </div>
+
+            <div className="mb-2 flex justify-center items-center">
+              <FaTwitter className='text-[1.4rem] font-bold'/>
+              <a className="text-white text-decoration-none ml-2" href="#">Twitter</a>
+            </div>
+           
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import { FormContactComponent } from "./FormContactComponent";
 
 export const ContactFormComponent = () => {
   return (
-    <section className="mt-16 mb-16 xl:w-8/10 mx-auto 2xl:w-7/10">
+    <section className="mt-16 mb-16 xl:w-8/10 mx-auto 2xl:w-7/10" id="contact">
       {/* Contenedor para toda la sección */}
       <div className="h-[48rem] xl:h-[34rem] xl:flex">
         {/* Contenedor para el texto */}

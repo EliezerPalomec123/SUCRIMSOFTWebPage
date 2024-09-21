@@ -8,7 +8,7 @@ import imageValores from "../assets/images/valores2.jpg";
 
 export const UsLgComponent = () => {
   return (
-    <section className="hidden xl:block">
+    <section className="hidden xl:block" id="us-lg">
       {/* Contenedor para la sección */}
       <div className=" w-[67rem] mx-auto 2xl:w-[80rem]">
         <ItemUsLgRightComponent

@@ -5,6 +5,21 @@ import { Link } from "react-scroll";
 export const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar si es móvil o no
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1280);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -31,7 +46,7 @@ export const HeaderComponent = () => {
         scrolled ? "bg-blue-bg" : "bg-transparent"
       }`}
     >
-      <nav className="bg-transparent backdrop-blur-md  dark:bg-transparent dark:border-gray-700 z-50">
+      <nav className="bg-transparent backdrop-blur-md dark:bg-transparent dark:border-gray-700 z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="#"
@@ -67,55 +82,69 @@ export const HeaderComponent = () => {
             </svg>
           </button>
           <div
-            className={`${
-              isOpen ? "block" : "hidden"
-            } w-full md:block md:w-auto`}
+            className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
             id="navbar-default"
           >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
                 <Link
-                  to="thecnologies" 
+                  to="init"
                   smooth={true}
                   duration={2000}
                   offset={-80}
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 hover:cursor-pointer"
+                  className="block py-2 px-3 text-white md:bg-transparent md:p-0 dark:text-white hover:cursor-pointer"
                   aria-current="page"
                 >
                   Inicio
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <Link
+                  to={isMobile ? "us-small" : "us-lg"}
+                  smooth={true}
+                  duration={2000}
+                  offset={-80}
+                  className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 dark:text-white hover:cursor-pointer"
+                  aria-current="page"
                 >
                   Nosotros
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#thecnologies"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <Link
+                  to="thecnologies"
+                  smooth={true}
+                  duration={2000}
+                  offset={-80}
+                  className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 dark:text-white hover:cursor-pointer"
+                  aria-current="page"
                 >
-                  Tenologías
-                </a>
+                  Tecnologías
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <Link
+                  to="services"
+                  smooth={true}
+                  duration={2000}
+                  offset={-80}
+                  className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 dark:text-white hover:cursor-pointer"
+                  aria-current="page"
                 >
                   Servicios
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={2000}
+                  offset={-80}
+                  className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 dark:text-white hover:cursor-pointer"
+                  aria-current="page"
                 >
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
